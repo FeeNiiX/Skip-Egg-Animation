@@ -7,7 +7,6 @@ local RS = game:GetService('ReplicatedStorage')
 local Players = game:GetService('Players')
 local HatchEventEggs = RS.Network.CustomEggs_Hatch
 local HatchNormalEggs = RS.Network.Eggs_RequestPurchase
-EggAmount = 77
 
 --[[
 local function getMaxHatchableEggs()
@@ -126,9 +125,9 @@ while true do
         OpenEgg()
     end
 
-    if TPToBestEgg then
+    --[[ if TPToBestEgg then
         TPToHighestEventEgg()
-    end
+    end ]]
 end
 
 local UserInputService = game:GetService('UserInputService')
@@ -139,8 +138,8 @@ UserInputService.InputBegan:Connect(function(Input)
         print('OpenNearestEgg: ', OpenNearestEgg)
     end
 
-    if Input.KeyCode == Enum.KeyCode.O then
+    --[[ if Input.KeyCode == Enum.KeyCode.O then
         TPToBestEgg = not TPToBestEgg
         print('TPToBestEgg:', TPToBestEgg)
-    end
+    end ]]
 end)
